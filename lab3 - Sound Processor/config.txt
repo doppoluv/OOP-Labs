@@ -1,0 +1,5 @@
+mute $1 7 10
+
+bassBoost $1 15 20
+
+mix $2 30 100
