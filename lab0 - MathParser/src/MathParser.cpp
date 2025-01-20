@@ -2,7 +2,19 @@
 #include <string>
 #include <stdexcept>
 
-bool isValue(char sym);
+bool isValue(char sym)
+{
+    const char *digits = "0123456789";
+    for (int i = 0; i < 10; i++)
+    {
+        if (sym == digits[i])
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
 
 namespace
 {
@@ -228,17 +240,3 @@ namespace
     };
 
 } // namespace
-
-bool isValue(char sym)
-{
-    const char *digits = "0123456789";
-    for (int i = 0; i < 10; i++)
-    {
-        if (sym == digits[i])
-        {
-            return true;
-        }
-    }
-
-    return false;
-}
